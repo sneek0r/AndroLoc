@@ -23,12 +23,14 @@ public class Main extends Activity implements LocationListener {
     
     @Override
     public void onStart() {
+    	super.onStart();
+    	
     	// get system location manager
     	this.manager = (LocationManager) getSystemService(LOCATION_SERVICE);
     	
     	Criteria criteria = new Criteria();
     	criteria.setAccuracy(Criteria.ACCURACY_FINE);
-    	criteria.setPowerRequirement(Criteria.POWER_MEDIUM);
+    	criteria.setPowerRequirement(Criteria.POWER_HIGH);
     	// Indicates whether the provider is allowed to incur monetary cost. 
     	criteria.setCostAllowed(false);
     	criteria.setAltitudeRequired(true);
@@ -39,11 +41,13 @@ public class Main extends Activity implements LocationListener {
     	String provider = this.manager.getBestProvider(criteria, true);
     	
     	// request location updates
-    	this.manager.requestLocationUpdates(provider, 60000, 10, this);
+    	this.manager.requestLocationUpdates(provider, 3000, 10, this);
     }
     
     @Override
     public void onStop() {
+    	super.onStop();
+    	
     	// remove location updates
     	this.manager.removeUpdates(this);
     }
