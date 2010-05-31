@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, Main!</string>
+    
     <string name="app_name">Andro Location Services</string>
+<string name="longtitude">Logntitude:</string>
+<string name="latitude">Latitude:</string>
+<string name="unknown">unknown</string>
+<string name="altitude">Altitude:</string>
+<string name="speed">Speed:</string>
+<string name="time">Time:</string>
+<string name="accuracy">Accuracy:</string>
+<string name="bearing">Bearing</string>
 </resources>

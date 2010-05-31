@@ -4,9 +4,138 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
+    
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	
+		<TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:text="@string/latitude"/>
+	    
+	    <TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+	    	android:id="@+id/latitude"
+	    	android:text="@string/unknown"/>
+	    	
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	
+	    <TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:text="@string/longtitude"/>
+		    
+		<TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+    		android:layout_weight="1"
+	    	android:id="@+id/longtitude"
+	    	android:text="@string/unknown"/>
+	</LinearLayout>
+	
+	<LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	
+	    <TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:text="@string/altitude"/>
+		    
+		<TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+    		android:layout_weight="1"
+	    	android:id="@+id/altitude"
+	    	android:text="@string/unknown"/>
+	</LinearLayout>
+	
+	<LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	
+	    <TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:text="@string/accuracy"/>
+		    
+		<TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+    		android:layout_weight="1"
+	    	android:id="@+id/accuracy"
+	    	android:text="@string/unknown"/>
+	</LinearLayout>
+	<LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	
+	    <TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:text="@string/time"/>
+		    
+		<TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+    		android:layout_weight="1"
+	    	android:id="@+id/time"
+	    	android:text="@string/unknown"/>
+	</LinearLayout>
+	
+	<LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	
+	    <TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:text="@string/speed"/>
+		    
+		<TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+    		android:layout_weight="1"
+	    	android:id="@+id/speed"
+	    	android:text="@string/unknown"/>
+	</LinearLayout>
+	
+	<LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	
+	    <TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:text="@string/bearing"/>
+		    
+		<TextView
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+    		android:layout_weight="1"
+	    	android:id="@+id/bearing"
+	    	android:text="@string/unknown"/>
+	</LinearLayout>
+	
 </LinearLayout>
