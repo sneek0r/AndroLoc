@@ -53,6 +53,7 @@ public class Main extends Activity implements LocationListener {
     }
 
 	public void onLocationChanged(Location location) {
+		
 		float accuracy = location.getAccuracy();
 		double altitude = location.getAltitude();
 		// Returns the direction of travel in degrees East of true North
@@ -63,7 +64,7 @@ public class Main extends Activity implements LocationListener {
 		long time = location.getTime();
 		
 		TextView accuracy_tv = (TextView)findViewById(R.id.accuracy);
-		accuracy_tv.setText(Float.toString(accuracy)+"m");
+		accuracy_tv.setText(String.format("%.0fm", accuracy));
 		accuracy_tv.postInvalidate();
 		
 		TextView altitude_tv = (TextView)findViewById(R.id.altitude);
@@ -71,7 +72,7 @@ public class Main extends Activity implements LocationListener {
 		altitude_tv.postInvalidate();
 		
 		TextView bearing_tv = (TextView)findViewById(R.id.bearing);
-		bearing_tv.setText(Float.toString(bearing));
+		bearing_tv.setText(String.format("%.0f°", bearing));
 		bearing_tv.postInvalidate();
 
 		TextView latitude_tv = (TextView)findViewById(R.id.latitude);
@@ -83,7 +84,7 @@ public class Main extends Activity implements LocationListener {
 		longtitude_tv.postInvalidate();
 
 		TextView speed_tv = (TextView)findViewById(R.id.speed);
-		speed_tv.setText(Float.toString(speed));
+		speed_tv.setText(String.format("%.0fm/s", speed));
 		speed_tv.postInvalidate();
 		
 		TextView time_tv = (TextView)findViewById(R.id.time);
