@@ -41,12 +41,12 @@ public class Main extends Activity implements LocationListener {
     	String provider = this.manager.getBestProvider(criteria, true);
     	
     	// request location updates
-    	this.manager.requestLocationUpdates(provider, 3000, 10, this);
+    	this.manager.requestLocationUpdates(provider, 60000, 60, this);
     }
     
     @Override
-    public void onStop() {
-    	super.onStop();
+    public void onDestroy() {
+    	super.onDestroy();
     	
     	// remove location updates
     	this.manager.removeUpdates(this);
@@ -76,11 +76,11 @@ public class Main extends Activity implements LocationListener {
 		bearing_tv.postInvalidate();
 
 		TextView latitude_tv = (TextView)findViewById(R.id.latitude);
-		latitude_tv.setText(Location.convert(latitude, Location.FORMAT_MINUTES));
+		latitude_tv.setText(Location.convert(latitude, Location.FORMAT_DEGREES));
 		latitude_tv.postInvalidate();
 
 		TextView longtitude_tv = (TextView)findViewById(R.id.longtitude);
-		longtitude_tv.setText(Location.convert(longtitude, Location.FORMAT_MINUTES));
+		longtitude_tv.setText(Location.convert(longtitude, Location.FORMAT_DEGREES));
 		longtitude_tv.postInvalidate();
 
 		TextView speed_tv = (TextView)findViewById(R.id.speed);
